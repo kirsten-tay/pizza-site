@@ -6,7 +6,7 @@ import img5 from './../Assets/img5.jpg';
 
 
  
-const Footer=(Footer)=>{
+const Sec=(Sec)=>{
     return(
         <Fragment>
         <div className="flex flex-row">
@@ -44,4 +44,4 @@ const Footer=(Footer)=>{
     }
     
     
-export default Footer;
+export default Sec;
