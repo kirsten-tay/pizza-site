@@ -6,10 +6,10 @@ const images = ['./../Assets/img2.jpg','./../Assets/img2.jpg']
 
 const Carousel = () => {
   // We will start by storing the index of the current image in the state.
-  const [currentImage, setCurrentImage] = React.useState(0);
+  const [currentImage, setCurrentImage] = react.useState(0);
 
   const refs = images.reduce((acc, val, i) => {
-    acc[i] = React.createRef();
+    acc[i] = react.createRef();
     return acc;
   }, {});
 
@@ -64,6 +64,7 @@ const Carousel = () => {
       </span>
     </button>
   );
+
 
  return(
   // Images are placed using inline flex. We then wrap an image in a div
