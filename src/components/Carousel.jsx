@@ -1,8 +1,8 @@
 import react from 'react';
+import img2 from './../Assets/img2.jpg';
+import img8 from './../Assets/img8.jpg';
 
-
-
-const images = ['./../Assets/img2.jpg','./../Assets/img2.jpg']
+const images = ['./../Assets/img8.jpg','./../Assets/img8.jpg']
 
 const Carousel = () => {
   // We will start by storing the index of the current image in the state.
