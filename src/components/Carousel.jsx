@@ -86,18 +86,29 @@ const Carousel = () => {
   // Finally the image itself will be 100% of a parent div. Outer div is
   // set with position relative, so we can place our cotrol buttons using
   // absolute positioning on each side of the image.
-    <div className="p-12 flex justify-center w-screen md:w-1/2 items-center">
+    <div className="flex flex-row ">
+    <div className="  flex flex-col justify-center p-12 w-screen md:w-1/2 items-center">
       <div className="relative w-full">
         <div className="carousel">
           {sliderControl(true)}
           {images.map((img, i) => (
             <div className="w-full flex-shrink-0" key={img} ref={refs[i]}>
-              <img src={img} alt={img} className="w-full object-contain" />
+              <img src={img}  className="w-full object-contain" />
             </div>
           ))}
           {sliderControl()}
         </div>
       </div>
+    </div>
+    <div className="flex flex-col justify-center items-center text-2xl border-2  border-gray-200">
+                <span>ABOUT US</span>
+                <span>Lorem ipsum dolor, sit amet consectetur  </span>
+                  <span>adipisicing elit.Maiores, cumque id provident </span>
+                    <span> dolore voluptates saepe nihil reprehenderit </span>
+                      <span> asperiores ipsam, porro beatae inventore </span>
+                        <span>repudiandae nostrum ipsa eligendi. </span>
+                          <span>Repellat sit quaerat doloremque?</span>
+                </div>
     </div>
   );
 };
