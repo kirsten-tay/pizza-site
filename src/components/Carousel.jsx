@@ -100,7 +100,7 @@ const Carousel = () => {
         </div>
       </div>
     </div>
-    <div className="flex flex-col justify-center items-center text-2xl border-2  border-gray-200">
+    <div className="flex flex-col justify-center items-center text-2xl ">
                 <span>ABOUT US</span>
                 <span>Lorem ipsum dolor, sit amet consectetur  </span>
                   <span>adipisicing elit.Maiores, cumque id provident </span>
