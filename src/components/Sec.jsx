@@ -6,7 +6,7 @@ import img5 from './../Assets/img5.jpg';
 
 
  
-const Sec=(Sec)=>{
+const Sec=()=>{
     return(
         <Fragment>
         <div className="flex flex-row">

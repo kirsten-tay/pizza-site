@@ -1,9 +1,14 @@
 import reactDom from "react-dom";
-import react  from 'react';
+import react from 'react';
 
 
 
-const images = ['https://unsplash.com/photos/ZA9PHAnVP5g','https://unsplash.com/photos/a66sGfOnnqQ', 'https://unsplash.com/photos/rcUw6b4iYe0','https://unsplash.com/photos/e6ZOmEfNHLM']
+const images = [
+  'https://unsplash.com/photos/ZA9PHAnVP5g',
+  'https://unsplash.com/photos/a66sGfOnnqQ',
+  'https://unsplash.com/photos/rcUw6b4iYe0',
+  'https://unsplash.com/photos/e6ZOmEfNHLM'
+]
 // images must be an array of urls , if using Next JS this could something like
 // const images = ['/img/img1.png', '/img/img2.png', '/img/img3.png']
 // images must be an array of urls , if using Next JS this could something like
@@ -21,6 +26,11 @@ const Carousel = () => {
     acc[i] = react.createRef();
     return acc;
   }, {});
+
+// npm install framer-motion done.
+// that is to help with the animation
+
+// then now you have the images
 
   const scrollToImage = i => {
     // First let's set the index of the image we want to see next
@@ -81,34 +91,34 @@ const Carousel = () => {
   );
 
   return (
-  // Images are placed using inline flex. We then wrap an image in a div
-  // with flex-shrink-0 to stop it from 'shrinking' to fit the outer div.
-  // Finally the image itself will be 100% of a parent div. Outer div is
-  // set with position relative, so we can place our cotrol buttons using
-  // absolute positioning on each side of the image.
+    // Images are placed using inline flex. We then wrap an image in a div
+    // with flex-shrink-0 to stop it from 'shrinking' to fit the outer div.
+    // Finally the image itself will be 100% of a parent div. Outer div is
+    // set with position relative, so we can place our cotrol buttons using
+    // absolute positioning on each side of the image.
     <div className="flex flex-row ">
-    <div className="  flex flex-col justify-center p-12 w-screen md:w-1/2 items-center">
-      <div className="relative w-full">
-        <div className="carousel">
-          {sliderControl(true)}
-          {images.map((img, i) => (
-            <div className="w-full flex-shrink-0" key={img} ref={refs[i]}>
-              <img src={img}  className="w-full object-contain" />
-            </div>
-          ))}
-          {sliderControl()}
+      <div className="  flex flex-col justify-center p-12 w-screen md:w-1/2 items-center">
+        <div className="relative w-full">
+          <div className="carousel">
+            {sliderControl(true)}
+            {images.map((img, i) => (
+              <div className="w-full flex-shrink-0" key={img} ref={refs[i]}>
+                <img src={img} className="w-full object-contain" />
+              </div>
+            ))}
+            {sliderControl()}
+          </div>
         </div>
       </div>
-    </div>
-    <div className="flex flex-col justify-center items-center text-2xl ">
-                <span>ABOUT US</span>
-                <span>Lorem ipsum dolor, sit amet consectetur  </span>
-                  <span>adipisicing elit.Maiores, cumque id provident </span>
-                    <span> dolore voluptates saepe nihil reprehenderit </span>
-                      <span> asperiores ipsam, porro beatae inventore </span>
-                        <span>repudiandae nostrum ipsa eligendi. </span>
-                          <span>Repellat sit quaerat doloremque?</span>
-                </div>
+      <div className="flex flex-col justify-center items-center text-2xl ">
+        <span>ABOUT US</span>
+        <span>Lorem ipsum dolor, sit amet consectetur  </span>
+        <span>adipisicing elit.Maiores, cumque id provident </span>
+        <span> dolore voluptates saepe nihil reprehenderit </span>
+        <span> asperiores ipsam, porro beatae inventore </span>
+        <span>repudiandae nostrum ipsa eligendi. </span>
+        <span>Repellat sit quaerat doloremque?</span>
+      </div>
     </div>
   );
 };
@@ -125,7 +135,7 @@ class App extends react.Component {
     return (
       <div className="w-screen flex justify-center">
         <Carousel />
-       </div>
+      </div>
     )
   }
 }
