@@ -1,6 +1,6 @@
-import React, { Fragment, useEffect, useState } from 'react';
-
+import React, { Fragment, useEffect, useState,previousImage,nextImage,arrowStyle } from 'react';
 import { motion } from 'framer-motion'
+
 const images = [
     'https://unsplash.com/photos/ZA9PHAnVP5g',
   'https://unsplash.com/photos/a66sGfOnnqQ',
@@ -16,7 +16,7 @@ const variants = {
 
 const Slider = () => {
 
-    const [activeIndex, setActiveIndex] = react.useState(0);
+    const [activeIndex, setActiveIndex] = React.useState(0);
 
     useEffect(() => {
         setInterval(() => setActiveIndex(activeIndex % 4), 2000)
@@ -32,19 +32,7 @@ const Slider = () => {
             {activeIndex === 3 && (<motion.img variants={variants} initial="hidden" animate="visible" className="h-96 w-full absolulte" src={images[3]} alt={images[3].slice(-6)} />)}
         </Fragment>
     )
-    const sliderControl = isLeft => (
-        <button
-          type="button"
-          onClick={isLeft ? previousImage : nextImage}
-          className={`${arrowStyle} ${isLeft ? 'left-2' : 'right-2'}`}
-          style={{ top: '40%' }}
-        >
-          <span role="img" aria-label={`Arrow ${isLeft ? 'left' : 'right'}`}>
-            {isLeft ? '◀' : '▶'}
-          </span>
-        </button>
-      );
-    
+   
 }
 
 export default Slider;
