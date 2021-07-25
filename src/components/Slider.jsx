@@ -1,11 +1,15 @@
 import React, { Fragment, useEffect, useState,previousImage,nextImage,arrowStyle } from 'react';
+import photo1 from './../Assets/photo1.jpg';
+import photo2 from './../Assets/photo2.jpg';
+import photo3 from './../Assets/photo3.jpg';
+import photo4 from './../Assets/photo4.jpg';
+
+
 import { motion } from 'framer-motion'
 
 const images = [
-    'https://unsplash.com/photos/ZA9PHAnVP5g',
-  'https://unsplash.com/photos/a66sGfOnnqQ',
-  'https://unsplash.com/photos/rcUw6b4iYe0',
-  'https://unsplash.com/photos/e6ZOmEfNHLM'
+    photo1,photo2,photo3,photo4
+
 ]
 
 const variants = {
@@ -32,7 +36,18 @@ const Slider = () => {
             {activeIndex === 3 && (<motion.img variants={variants} initial="hidden" animate="visible" className="h-96 w-full absolulte" src={images[3]} alt={images[3].slice(-6)} />)}
         </Fragment>
     )
-   
+    const sliderControl = isLeft => (
+        <button
+          type="button"
+          onClick={isLeft ? activeIndex: nextImage}
+          className={`${arrowStyle} ${isLeft ? 'left-2' : 'right-2'}`}
+          style={{ top: '40%' }}
+        >
+          <span role="img" aria-label={`Arrow ${isLeft ? 'left' : 'right'}`}>
+            {isLeft ? '◀' : '▶'}
+          </span>
+        </button>
+      );
 }
 
 export default Slider;
