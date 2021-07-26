@@ -36,18 +36,7 @@ const Slider = () => {
             {activeIndex === 3 && (<motion.img variants={variants} initial="hidden" animate="visible" className="h-96 w-full absolulte" src={images[3]} alt={images[3].slice(-6)} />)}
         </Fragment>
     )
-    const sliderControl = isLeft => (
-        <button
-          type="button"
-          onClick={isLeft ? activeIndex: nextImage}
-          className={`${arrowStyle} ${isLeft ? 'left-2' : 'right-2'}`}
-          style={{ top: '40%' }}
-        >
-          <span role="img" aria-label={`Arrow ${isLeft ? 'left' : 'right'}`}>
-            {isLeft ? '◀' : '▶'}
-          </span>
-        </button>
-      );
+    
 }
 
 export default Slider;
