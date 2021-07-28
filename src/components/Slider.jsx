@@ -12,7 +12,7 @@ const Slider=()=>{
           
             
               <div className="w-full flex-shrink-0 ">
-                <Carouselcomponent className="w-full object-contain" />
+                <Carouselcomponent/>
               </div>
             
           

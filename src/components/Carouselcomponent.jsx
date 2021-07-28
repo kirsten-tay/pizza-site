@@ -13,7 +13,7 @@ const variants = {
 const Carouselcomponent=()=>{
     return (
         <div class="carousel-wrapper">
-            <Carousel >
+            <Carousel className="w-100 h-90" >
                 <div>
                     <img src="../photo1.jpg" />
                 </div>
