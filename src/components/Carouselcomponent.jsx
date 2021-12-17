@@ -1,9 +1,7 @@
 import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import  Carousel from 'react-responsive-carousel';
 
-import { motion } from 'framer-motion'
-
+ 
 
 const variants = {
     hidden: { x: -200 },
