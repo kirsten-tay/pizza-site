@@ -1,5 +1,7 @@
 import React from 'react';
-import  Carousel from 'react-responsive-carousel';
+import ReactDOM from 'react-dom';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import  {Carousel} from 'react-responsive-carousel';
 
  
 
@@ -8,7 +10,7 @@ const variants = {
     visible: { x: 0 }
 }
 
-const Carouselcomponent=()=>{
+const Carouselcomponent=()=>{ 
     return (
         <div class="carousel-wrapper">
             <Carousel className="w-100 h-90" >
