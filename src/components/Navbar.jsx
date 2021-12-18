@@ -13,9 +13,9 @@ const Navbar=() => {
 
             <div className="flex flex-1 items-center justify-end ">
             <nav className="space-x-10 flex">
-              <a className="text-sm">HOME</a>
-              <a className="text-sm">ABOUT PIZZA</a>
-              <a className="text-sm">PIZZA TYPES</a>
+              <a href="Navbar" className="text-sm">HOME</a>
+              <a href="Sec" className="text-sm">ABOUT PIZZA</a>
+              <a href="Footer" className="text-sm">PIZZA TYPES</a>
             </nav>
             
           </div>
