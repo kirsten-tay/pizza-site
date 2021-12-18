@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 import logo from './../Assets/logo.jpg'
 
 
@@ -7,7 +7,7 @@ const Navbar=() => {
      
           <div className=" flex flex-row flex justify-between items-center bg-red-600 px-10 border-b border-gray-200">
             <div className="flex flex-1 justify-start">
-              <img src={logo} className="h-20 w-20" />
+              <img src={logo} className="h-20 w-20" alt="main"/>
                           <div className="flex text-2xl py-5"><span>PIZZAMANIA</span></div>
             </div>
 
